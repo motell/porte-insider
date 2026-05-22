@@ -871,7 +871,7 @@ body { min-height: 100vh; }
         <div class="role">press kit ／ media</div>
         <div class="h">メディア関係者さま窓口</div>
         <div class="d">取材依頼・素材請求は下記までお願いいたします。</div>
-        <a class="email" href="mailto:press@portebeauty.com?subject=%5BLA%20CARPE%20FES%202026%5D%E3%83%97%E3%83%AC%E3%82%B9%E7%B4%A0%E6%9D%90%E8%AB%8B%E6%B1%82&body=%E2%96%A0%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E3%81%94%E5%88%A9%E7%94%A8%E7%9B%AE%E7%9A%84%EF%BC%9A%0A">press@portebeauty.com →</a>
+        <a class="email" href="mailto:info@startkey.co.jp?subject=%5BLA%20CARPE%20FES%202026%5D%E3%83%97%E3%83%AC%E3%82%B9%E7%B4%A0%E6%9D%90%E8%AB%8B%E6%B1%82&body=%E2%96%A0%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E3%81%94%E5%88%A9%E7%94%A8%E7%9B%AE%E7%9A%84%EF%BC%9A%0A">info@startkey.co.jp →</a>
       </div>
     </div>
   </section>
@@ -889,7 +889,7 @@ body { min-height: 100vh; }
         <div class="role">wholesale ／ buyer</div>
         <div class="h">バイヤーさま窓口</div>
         <div class="d">取扱いのご検討・商談のご相談は下記までお問い合わせください。</div>
-        <a class="email" href="mailto:wholesale@portebeauty.com?subject=%5BLA%20CARPE%20FES%202026%5D%E5%95%86%E8%AB%87%E3%83%BB%E3%81%8A%E5%8F%96%E6%89%B1%E3%81%84%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E5%BA%97%E8%88%97%E3%83%BB%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%EF%BC%9A%0A%E2%96%A0%E3%81%94%E8%B3%AA%E5%95%8F%E5%86%85%E5%AE%B9%EF%BC%9A%0A">wholesale@portebeauty.com →</a>
+        <a class="email" href="mailto:info@startkey.co.jp?subject=%5BLA%20CARPE%20FES%202026%5D%E5%95%86%E8%AB%87%E3%83%BB%E3%81%8A%E5%8F%96%E6%89%B1%E3%81%84%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E5%BA%97%E8%88%97%E3%83%BB%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%EF%BC%9A%0A%E2%96%A0%E3%81%94%E8%B3%AA%E5%95%8F%E5%86%85%E5%AE%B9%EF%BC%9A%0A">info@startkey.co.jp →</a>
       </div>
     </div>
   </section>
@@ -958,7 +958,7 @@ body { min-height: 100vh; }
       <dt>Company</dt><dd>株式会社STARTKEY</dd>
       <dt>Founded</dt><dd>2024年7月</dd>
       <dt>Address</dt><dd>大阪市北区梅田1丁目11番4号<br>大阪駅前第4ビル 9階 923-1709号</dd>
-      <dt>Contact</dt><dd>info@portebeauty.com</dd>
+      <dt>Contact</dt><dd>info@startkey.co.jp</dd>
     </dl>
     <div class="foot-links">
       <a href="https://portebeauty.com/discount/PORTE15?redirect=%2Fproducts%2Fporte-serum-30ml-subscription">official store</a>
@@ -1055,14 +1055,42 @@ body { min-height: 100vh; }
       submitBtn.textContent = '送信中…';
 
       var data = new FormData(form);
-      // ===== TODO: Replace this URL with your Formspree / Netlify / Google Apps Script endpoint =====
-      // If you previously had a working endpoint, paste it below:
+      var entries = Object.fromEntries(data.entries());
+
+      // ===== Submission target =====
+      // 1) If a server endpoint is set, POST there (Formspree / GAS / Netlify Forms 等).
+      //    Configure later by pasting your endpoint URL into ENDPOINT below.
+      // 2) Otherwise, fall back to launching the visitor's mail client with all
+      //    the form data pre-filled, addressed to info@startkey.co.jp.
       var ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxxxx'
+      var MAILTO_TO = 'info@startkey.co.jp';
 
       var showSuccess = function(){
         form.style.display = 'none';
         success.classList.add('show');
         success.scrollIntoView({ behavior:'smooth', block:'start' });
+      };
+
+      var fallbackToMailto = function(){
+        var subject = '[LA CARPE FES 2026] 追加サンプル請求 / ' + (entries.name || '');
+        var body =
+          '【追加サンプル請求】\n' +
+          '──────────────\n' +
+          'お名前　　　：' + (entries.name || '') + '\n' +
+          'メール　　　：' + (entries.email || '') + '\n' +
+          '電話番号　　：' + (entries.tel || '') + '\n' +
+          '郵便番号　　：' + (entries.zip || '') + '\n' +
+          'ご住所　　　：' + (entries.address || '') + '\n' +
+          '来場目的　　：' + (entries.purpose || '') + '\n' +
+          'ひとこと　　：\n' + (entries.message || '') + '\n' +
+          '──────────────\n' +
+          '※ このメールは porté Insider Pass フォームから自動生成されました。\n';
+        var href = 'mailto:' + MAILTO_TO +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+        window.location.href = href;
+        // Show success after a short delay so the mail app has time to open.
+        setTimeout(showSuccess, 600);
       };
 
       if (ENDPOINT) {
@@ -1071,16 +1099,21 @@ body { min-height: 100vh; }
           headers: { 'Accept': 'application/json' },
           body: data
         }).then(function(r){
-          if (r.ok) showSuccess();
-          else { submitBtn.disabled = false; submitBtn.textContent = 'サンプルを請求する →'; alert('送信に失敗しました。時間をおいて再度お試しください。'); }
+          if (r.ok) { showSuccess(); }
+          else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'サンプルを請求する →';
+            alert('送信に失敗しました。時間をおいて再度お試しください。');
+          }
         }).catch(function(){
-          submitBtn.disabled = false; submitBtn.textContent = 'サンプルを請求する →';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'サンプルを請求する →';
           alert('送信に失敗しました。時間をおいて再度お試しください。');
         });
       } else {
-        // No endpoint configured yet — show success and log payload to console
-        console.log('Sample request (no endpoint configured):', Object.fromEntries(data.entries()));
-        setTimeout(showSuccess, 400);
+        // No server endpoint yet — fall back to mailer.
+        console.log('Sample request → mailto fallback:', entries);
+        fallbackToMailto();
       }
     });
   }
