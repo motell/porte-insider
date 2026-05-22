@@ -1,86 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="LA CARPE FES 2026 ご来場者さま限定。porté ブランドの4つの特典をご利用いただけます。">
 <title>porté Insider Pass ／ LA CARPE FES 2026</title>
-<meta name="description" content="LA CARPE FES 2026 ご来場者さま限定。porté ブランドの4つの特典をご利用いただけます。" />
-<meta name="robots" content="noindex, nofollow" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=DM+Mono:wght@400;500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ===== Period gate (Option B) ===== */
-.gate {
-  position: fixed;
-  inset: 0;
-  background: var(--bg, #F1ECE0);
-  z-index: 9999;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 32px;
-  text-align: center;
-  font-family: "Noto Sans JP", sans-serif;
-}
-.gate.show { display: flex; }
-.gate-mark {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 42px;
-  font-weight: 400;
-  color: #0F3D2C;
-  letter-spacing: 0.04em;
-  margin-bottom: 28px;
-}
-.gate-rule {
-  width: 36px;
-  height: 1.5px;
-  background: #B68F3F;
-  margin: 0 auto 28px;
-}
-.gate-title {
-  font-family: "Noto Serif JP", serif;
-  font-size: 22px;
-  line-height: 1.5;
-  color: #1B2820;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  margin: 0 0 16px;
-  max-width: 340px;
-}
-.gate-msg {
-  font-size: 13.5px;
-  line-height: 1.9;
-  color: #4A4538;
-  max-width: 340px;
-  margin: 0 0 32px;
-}
-.gate-meta {
-  font-family: "DM Mono", monospace;
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #8C8576;
-  margin-bottom: 10px;
-}
-.gate-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #0F3D2C;
-  color: #fff;
-  font-family: "Noto Serif JP", serif;
-  font-size: 14px;
-  padding: 14px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  margin-top: 8px;
-}
-.gate-btn:hover { background: #0A2C1F; }
-</style>
 :root {
   --bg: #F1ECE0;
   --bg-warm: #EAE3D2;
@@ -129,6 +58,42 @@ body { min-height: 100vh; }
   overflow: hidden;
 }
 
+/* ===== EXPIRED SCREEN ===== */
+.expired-screen {
+  display: none;
+  min-height: 100vh;
+  padding: 80px 32px;
+  text-align: center;
+  background: var(--bg);
+}
+.expired-screen.show { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.expired-screen .logo { width: 120px; margin-bottom: 32px; opacity: 0.9; }
+.expired-screen h1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--green-deep);
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+.expired-screen p {
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  margin: 0 0 32px;
+}
+.expired-screen a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--green-deep);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-family: "Noto Serif JP", serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
 /* ===== HERO ===== */
 .hero {
   position: relative;
@@ -156,9 +121,7 @@ body { min-height: 100vh; }
   border-radius: 999px;
   padding: 7px 14px;
 }
-.hero-logo-wrap {
-  margin: auto 0 0;
-}
+.hero-logo-wrap { margin: auto 0 0; }
 .hero-eyebrow {
   font-family: "DM Mono", monospace;
   font-size: 10.5px;
@@ -282,9 +245,7 @@ body { min-height: 100vh; }
   font-weight: 500;
   line-height: 1;
 }
-.coupon-card .off-block {
-  text-align: right;
-}
+.coupon-card .off-block { text-align: right; }
 .coupon-card .off {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
@@ -292,10 +253,7 @@ body { min-height: 100vh; }
   line-height: 1;
   font-weight: 500;
 }
-.coupon-card .off .percent {
-  font-size: 20px;
-  margin-left: 2px;
-}
+.coupon-card .off .percent { font-size: 20px; margin-left: 2px; }
 .coupon-card .off-l {
   font-family: "DM Mono", monospace;
   font-size: 8.5px;
@@ -335,10 +293,7 @@ body { min-height: 100vh; }
   color: #fff;
 }
 .btn-ghost-light:hover { background: rgba(255,255,255,0.16); }
-.btn-gold {
-  background: var(--gold);
-  color: #fff;
-}
+.btn-gold { background: var(--gold); color: #fff; }
 .btn-gold:hover { background: var(--gold-soft); }
 .coupon-section .expire {
   margin-top: 14px;
@@ -372,9 +327,7 @@ body { min-height: 100vh; }
 }
 
 /* ===== SECTIONS ===== */
-.section {
-  padding: 56px 28px 12px;
-}
+.section { padding: 56px 28px 12px; }
 .section-eyebrow {
   font-family: "DM Mono", monospace;
   font-size: 10px;
@@ -392,24 +345,12 @@ body { min-height: 100vh; }
   color: var(--ink);
   margin: 0 0 12px;
 }
-.section-rule {
-  width: 40px;
-  height: 1.5px;
-  background: var(--gold);
-  margin: 14px 0 22px;
-}
-.section-body {
-  font-size: 13.5px;
-  line-height: 1.9;
-  color: var(--ink-soft);
-}
+.section-rule { width: 40px; height: 1.5px; background: var(--gold); margin: 14px 0 22px; }
+.section-body { font-size: 13.5px; line-height: 1.9; color: var(--ink-soft); }
 .section-body p { margin: 0 0 12px; }
 
 /* ===== BRAND STORY ===== */
-.brand-section {
-  background: var(--bg-cream);
-  padding: 56px 28px 48px;
-}
+.brand-section { background: var(--bg-cream); padding: 56px 28px 48px; }
 .brand-section .pull {
   margin-top: 22px;
   padding: 20px 22px;
@@ -423,12 +364,8 @@ body { min-height: 100vh; }
 }
 
 /* ===== PRODUCT ===== */
-.product-section {
-  padding: 56px 0 48px;
-}
-.product-head {
-  padding: 0 28px 22px;
-}
+.product-section { padding: 56px 0 48px; }
+.product-head { padding: 0 28px 22px; }
 .product-photo {
   width: 100%;
   height: 280px;
@@ -441,9 +378,7 @@ body { min-height: 100vh; }
   inset: 0;
   background: linear-gradient(180deg, rgba(15,32,24,0) 60%, rgba(15,32,24,0.18) 100%);
 }
-.product-body {
-  padding: 28px 28px 0;
-}
+.product-body { padding: 28px 28px 0; }
 .feature-row {
   display: flex;
   align-items: flex-start;
@@ -474,11 +409,7 @@ body { min-height: 100vh; }
   color: var(--green-deep);
   margin-bottom: 4px;
 }
-.feature-row .ft-desc {
-  font-size: 12.5px;
-  line-height: 1.7;
-  color: var(--ink-soft);
-}
+.feature-row .ft-desc { font-size: 12.5px; line-height: 1.7; color: var(--ink-soft); }
 .spec {
   margin-top: 22px;
   padding-top: 18px;
@@ -495,30 +426,12 @@ body { min-height: 100vh; }
   color: var(--ink-mute);
   margin-bottom: 5px;
 }
-.spec-v {
-  font-family: "Noto Serif JP", serif;
-  font-size: 15px;
-  color: var(--ink);
-  font-weight: 500;
-}
-.spec-v .small {
-  font-size: 10px;
-  color: var(--ink-mute);
-  margin-left: 3px;
-  font-weight: 400;
-}
+.spec-v { font-family: "Noto Serif JP", serif; font-size: 15px; color: var(--ink); font-weight: 500; }
+.spec-v .small { font-size: 10px; color: var(--ink-mute); margin-left: 3px; font-weight: 400; }
 
 /* ===== PERKS ===== */
-.perks-section {
-  background: var(--bg-warm);
-  padding: 56px 28px 48px;
-}
-.perks-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 6px;
-}
+.perks-section { background: var(--bg-warm); padding: 56px 28px 48px; }
+.perks-list { display: flex; flex-direction: column; gap: 14px; margin-top: 6px; }
 .perk {
   background: var(--card);
   border-radius: var(--r-md);
@@ -534,12 +447,7 @@ body { min-height: 100vh; }
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(20,32,24,0.08), 0 20px 40px rgba(20,32,24,0.1);
 }
-.perk-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-}
+.perk-head { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
 .perk-num {
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
@@ -556,12 +464,7 @@ body { min-height: 100vh; }
   letter-spacing: 0.02em;
   flex: 1;
 }
-.perk-desc {
-  font-size: 12.5px;
-  line-height: 1.75;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-}
+.perk-desc { font-size: 12.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 14px; }
 .perk-cta {
   display: inline-flex;
   align-items: center;
@@ -590,27 +493,10 @@ body { min-height: 100vh; }
 }
 
 /* ===== FORM ===== */
-.form-section {
-  padding: 56px 28px 48px;
-  background: var(--bg-cream);
-}
-.form-card {
-  background: var(--card);
-  border-radius: var(--r-md);
-  padding: 26px 24px;
-  box-shadow: var(--shadow-card);
-}
-.form-intro {
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--ink-soft);
-  margin: 0 0 22px;
-}
-.field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 18px;
-}
+.form-section { padding: 56px 28px 48px; background: var(--bg-cream); }
+.form-card { background: var(--card); border-radius: var(--r-md); padding: 26px 24px; box-shadow: var(--shadow-card); }
+.form-intro { font-size: 13px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 22px; }
+.field { display: flex; flex-direction: column; margin-bottom: 18px; }
 .field .lbl {
   font-family: "DM Mono", monospace;
   font-size: 9.5px;
@@ -641,9 +527,7 @@ body { min-height: 100vh; }
   border-radius: 4px;
   font-weight: 500;
 }
-.field input,
-.field textarea,
-.field select {
+.field input, .field textarea, .field select {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   color: var(--ink);
@@ -655,27 +539,13 @@ body { min-height: 100vh; }
   transition: border-color 0.2s ease, background 0.2s ease;
   width: 100%;
 }
-.field input:focus,
-.field textarea:focus,
-.field select:focus {
+.field input:focus, .field textarea:focus, .field select:focus {
   border-color: var(--green);
   background: #fff;
 }
-.field textarea {
-  min-height: 96px;
-  resize: vertical;
-}
-.field .helper {
-  font-size: 11px;
-  color: var(--ink-mute);
-  margin-top: 6px;
-  line-height: 1.6;
-}
-.radio-row {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
+.field textarea { min-height: 96px; resize: vertical; }
+.field .helper { font-size: 11px; color: var(--ink-mute); margin-top: 6px; line-height: 1.6; }
+.radio-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .radio-chip {
   border: 1px solid var(--hairline);
   border-radius: 999px;
@@ -687,6 +557,7 @@ body { min-height: 100vh; }
   font-family: "Noto Sans JP", sans-serif;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
   user-select: none;
+  position: relative;
 }
 .radio-chip input {
   position: absolute;
@@ -715,15 +586,8 @@ body { min-height: 100vh; }
 }
 .btn-submit:hover { background: var(--green-darker); }
 .btn-submit:active { transform: scale(0.99); }
-.btn-submit:disabled {
-  background: var(--ink-mute);
-  cursor: not-allowed;
-}
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 30px 8px 8px;
-}
+.btn-submit:disabled { background: var(--ink-mute); cursor: not-allowed; }
+.form-success { display: none; text-align: center; padding: 30px 8px 8px; }
 .form-success.show { display: block; }
 .form-success .check {
   width: 64px;
@@ -745,29 +609,12 @@ body { min-height: 100vh; }
   color: var(--green-deep);
   margin: 0 0 10px;
 }
-.form-success p {
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--ink-soft);
-  margin: 0;
-}
+.form-success p { font-size: 13px; line-height: 1.85; color: var(--ink-soft); margin: 0; }
 
 /* ===== FAQ / MEDIA / BUYER ===== */
-.simple-section {
-  padding: 56px 28px 0;
-}
-.contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 22px;
-}
-.contact-card {
-  background: var(--card);
-  border-radius: var(--r-md);
-  padding: 22px 22px;
-  box-shadow: var(--shadow-card);
-}
+.simple-section { padding: 56px 28px 0; }
+.contact-grid { display: flex; flex-direction: column; gap: 14px; margin-top: 22px; }
+.contact-card { background: var(--card); border-radius: var(--r-md); padding: 22px 22px; box-shadow: var(--shadow-card); }
 .contact-card .role {
   font-family: "DM Mono", monospace;
   font-size: 9.5px;
@@ -783,12 +630,7 @@ body { min-height: 100vh; }
   color: var(--green-deep);
   margin-bottom: 6px;
 }
-.contact-card .d {
-  font-size: 12.5px;
-  line-height: 1.75;
-  color: var(--ink-soft);
-  margin-bottom: 14px;
-}
+.contact-card .d { font-size: 12.5px; line-height: 1.75; color: var(--ink-soft); margin-bottom: 14px; }
 .contact-card .email {
   display: inline-flex;
   align-items: center;
@@ -809,18 +651,8 @@ body { min-height: 100vh; }
   color: rgba(255,255,255,0.78);
   margin-top: 56px;
 }
-.foot-logo {
-  width: 110px;
-  filter: brightness(0) invert(1);
-  display: block;
-  margin-bottom: 18px;
-}
-.foot p {
-  font-size: 12.5px;
-  line-height: 1.85;
-  margin: 0 0 18px;
-  color: rgba(255,255,255,0.72);
-}
+.foot-logo { width: 110px; filter: brightness(0) invert(1); display: block; margin-bottom: 18px; }
+.foot p { font-size: 12.5px; line-height: 1.85; margin: 0 0 18px; color: rgba(255,255,255,0.72); }
 .foot-info {
   margin-top: 18px;
   padding-top: 18px;
@@ -839,19 +671,8 @@ body { min-height: 100vh; }
   color: var(--gold-soft);
   padding-top: 1px;
 }
-.foot-info dd {
-  margin: 0;
-  font-family: "Noto Serif JP", serif;
-  color: rgba(255,255,255,0.92);
-  font-weight: 500;
-  font-size: 12.5px;
-}
-.foot-links {
-  margin-top: 24px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
+.foot-info dd { margin: 0; font-family: "Noto Serif JP", serif; color: rgba(255,255,255,0.92); font-weight: 500; font-size: 12.5px; }
+.foot-links { margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; }
 .foot-links a {
   font-family: "DM Mono", monospace;
   font-size: 10px;
@@ -873,130 +694,107 @@ body { min-height: 100vh; }
 
 /* ===== Desktop polish ===== */
 @media (min-width: 720px) {
-  .shell {
-    max-width: 520px;
-    box-shadow: 0 0 80px rgba(20,32,24,0.08);
-  }
+  .shell { max-width: 520px; box-shadow: 0 0 80px rgba(20,32,24,0.08); }
   body { padding: 0; background: #E5DFCF; }
 }
 </style>
 </head>
 <body>
 
-<!-- ===== ACCESS WINDOW GATE (Option B: 2026.05.22 — 2026.08.22) ===== -->
-<div class="gate" id="gate">
-  <div class="gate-mark">porté</div>
-  <div class="gate-rule"></div>
-  <div class="gate-meta" id="gate-meta">insider pass</div>
-  <h1 class="gate-title" id="gate-title">ご利用期間は終了しました。</h1>
-  <p class="gate-msg" id="gate-msg">
-    porté Insider Pass のご利用期間は<br />
-    2026.05.22 fri — 2026.08.22 sun でした。<br />
+<!-- ===== EXPIRED SCREEN (shown only after 2026.08.22) ===== -->
+<div class="expired-screen" id="expiredScreen">
+  <img src="assets/porte-logo.png" alt="porté" class="logo">
+  <h1>ご利用期間は終了しました。</h1>
+  <p>
+    porté Insider Pass のご利用期間は<br>
+    2026.05.22 fri — 2026.08.22 sun でした。<br>
     ご来場いただき誠にありがとうございました。
   </p>
-  <a class="gate-btn" href="https://portebeauty.com/" target="_blank" rel="noopener">porté 公式サイトへ →</a>
+  <a href="https://portebeauty.com/">porté 公式サイトへ →</a>
 </div>
 
-<div class="shell">
+<!-- ===== MAIN SHELL ===== -->
+<div class="shell" id="mainShell">
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-top">
-      <span class="pill">insider pass</span>
-      <span>2026.05.22 fri</span>
+      <span>insider pass · 2026.05.22 fri</span>
+      <span class="pill">welcome to la carpe fes 2026</span>
     </div>
-
     <div class="hero-logo-wrap">
-      <div class="hero-eyebrow">welcome to la carpe fes 2026</div>
-      <img src="assets/porte-logo.png" alt="porté" class="hero-logo" />
-      <div class="hero-tag">beauty ／ skincare</div>
-
+      <div class="hero-eyebrow">beauty ／ skincare</div>
+      <img src="assets/porte-logo.png" alt="porté" class="hero-logo">
+      <div class="hero-tag">porté insider pass</div>
       <div class="hero-rule"></div>
-      <h1 class="hero-title">ご来場ありがとう<br />ございます。</h1>
-      <p class="hero-sub">本ページは、porté ブースにてサンプルをお受け取りいただいた皆さま限定のご案内ページです。<br />4つの特典を、お好きな順にご利用ください。</p>
-
+      <h1 class="hero-title">ご来場ありがとう<br>ございます。</h1>
+      <p class="hero-sub">
+        本ページは、porté ブースにてサンプルをお受け取りいただいた皆さま限定のご案内ページです。4つの特典を、お好きな順にご利用ください。
+      </p>
       <div class="hero-meta">
-        <div>
-          From
-          <span class="v">STARTKEY</span>
-        </div>
-        <div style="text-align:right;">
-          Brand
-          <span class="v">porté</span>
-        </div>
+        <div>From<span class="v">STARTKEY</span></div>
+        <div>Brand<span class="v">porté</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== COUPON ===== -->
-  <section class="coupon-section">
+  <!-- COUPON -->
+  <section class="coupon-section" id="coupon-anchor">
     <div class="lbl">perk 01 — ec coupon</div>
-    <h2 class="headline">公式EC 初回 15% OFF<br />クーポンを進呈。</h2>
-
+    <h2 class="headline">公式EC 初回 15% OFF<br>クーポンを進呈。</h2>
     <div class="coupon-card">
       <div class="code-block">
         <div class="k">coupon code</div>
-        <div class="code" id="coupon-code">PORTE15</div>
+        <div class="code" id="couponCode">PORTE15</div>
       </div>
       <div class="off-block">
         <div class="off">15<span class="percent">%</span></div>
         <div class="off-l">off ／ first order</div>
       </div>
     </div>
-
     <div class="coupon-actions">
-      <button class="btn btn-ghost-light" id="copy-btn" type="button">
-        <span>コードをコピー</span>
-      </button>
-      <a class="btn btn-gold" href="https://portebeauty.com/discount/PORTE15?redirect=%2Fproducts%2Fporte-serum-30ml-subscription" target="_blank" rel="noopener">
-        <span>公式ECへ →</span>
-      </a>
+      <button type="button" class="btn btn-ghost-light" id="copyCouponBtn">コードをコピー</button>
+      <a class="btn btn-gold" href="https://portebeauty.com/discount/PORTE15?redirect=%2Fproducts%2Fporte-serum-30ml-subscription" target="_blank" rel="noopener">公式ECへ →</a>
     </div>
-
     <div class="expire">valid until 2026.08.22</div>
   </section>
 
-  <!-- ===== BRAND STORY ===== -->
-  <section class="section brand-section">
+  <!-- BRAND STORY -->
+  <section class="brand-section">
     <div class="section-eyebrow">about porté</div>
-    <h2 class="section-title">「何を塗っても、<br />肌がピリつく。」<br />その悩みから。</h2>
+    <h2 class="section-title">「何を塗っても、<br>肌がピリつく。」<br>その悩みから。</h2>
     <div class="section-rule"></div>
     <div class="section-body">
       <p>porté は、敏感肌の悩みを抱える開発者自身の経験から生まれた、導入美容液ブランドです。</p>
       <p>アトピー性皮膚炎をはじめとする肌悩みを抱えながらも、スキンケアをあきらめたくない。その願いから、約1年の試作期間を経て、必要なものだけを残す処方が完成しました。</p>
     </div>
-    <div class="pull">「肌が、自分で<br />立ち上がれる状態へ。」</div>
+    <div class="pull">「肌が、自分で<br>立ち上がれる状態へ。」</div>
   </section>
 
-  <!-- ===== PRODUCT ===== -->
+  <!-- PRODUCT -->
   <section class="product-section">
-    <div class="product-head section">
-      <div class="section-eyebrow" style="padding:0;margin-top:-56px;">product</div>
-      <h2 class="section-title" style="font-size:22px;">ナノPT<br />ブースターセラム</h2>
+    <div class="product-head">
+      <div class="section-eyebrow">product</div>
+      <h2 class="section-title">ナノPT<br>ブースターセラム</h2>
       <div class="section-rule"></div>
-      <div class="section-body">
-        <p>洗顔後すぐに1プッシュ。<br />ナノプラチナ × ナノゴールドが肌の土台を整え、その後のスキンケアの浸透をサポートします。</p>
-      </div>
     </div>
-
-    <div class="product-photo" role="img" aria-label="ナノPTブースターセラム"></div>
-
+    <div class="product-photo"></div>
     <div class="product-body">
+      <p class="section-body">洗顔後すぐに1プッシュ。<br>ナノプラチナ × ナノゴールドが肌の土台を整え、その後のスキンケアの浸透をサポートします。</p>
       <div class="feature-row">
-        <span class="icon gold"></span>
+        <div class="icon gold"></div>
         <div>
           <div class="ft-name">ナノゴールド</div>
           <div class="ft-desc">肌表面をなめらかに整え、キメの乱れを防ぐサポート。</div>
         </div>
       </div>
       <div class="feature-row">
-        <span class="icon plat"></span>
+        <div class="icon plat"></div>
         <div>
           <div class="ft-name">ナノプラチナ</div>
           <div class="ft-desc">スキンケアの土台を整え、次の化粧水の浸透をサポート。</div>
         </div>
       </div>
-
       <div class="spec">
         <div>
           <div class="spec-k">Volume</div>
@@ -1018,316 +816,275 @@ body { min-height: 100vh; }
     </div>
   </section>
 
-  <!-- ===== PERKS ===== -->
+  <!-- PERKS -->
   <section class="perks-section">
     <div class="section-eyebrow">your perks</div>
-    <h2 class="section-title">ご来場者さま<br />限定の4特典。</h2>
+    <h2 class="section-title">ご来場者さま<br>限定の4特典。</h2>
     <div class="section-rule"></div>
-    <p class="section-body" style="margin-bottom:0;">用途に合わせて、お好きな特典をご利用ください。</p>
-
+    <p class="section-body" style="margin-bottom:6px;">用途に合わせて、お好きな特典をご利用ください。</p>
     <div class="perks-list">
-      <a class="perk" href="#coupon-anchor" onclick="document.querySelector('.coupon-section').scrollIntoView({behavior:'smooth',block:'start'});return false;">
+      <a class="perk" href="#coupon-anchor">
         <div class="perk-head">
           <span class="perk-num">01</span>
           <span class="perk-name">EC 初回 15% OFF</span>
         </div>
         <div class="perk-desc">公式オンラインストアにて、初回ご購入時にご利用いただけるクーポンを進呈。</div>
-        <div class="perk-cta">
-          <span>use coupon</span>
-          <span class="arrow">↑</span>
-        </div>
+        <div class="perk-cta"><span>use coupon</span><span class="arrow">↑</span></div>
       </a>
-
-      <a class="perk" href="#press" onclick="document.getElementById('press').scrollIntoView({behavior:'smooth',block:'start'});return false;">
+      <a class="perk" href="#press">
         <div class="perk-head">
           <span class="perk-num">02</span>
           <span class="perk-name">プレス素材 ダウンロード</span>
         </div>
         <div class="perk-desc">製品高解像度画像・ロゴデータ・ブランドファクトシート一式をご用意。記事制作にご活用ください。</div>
-        <div class="perk-cta">
-          <span>open for media</span>
-          <span class="arrow">→</span>
-        </div>
+        <div class="perk-cta"><span>open for media</span><span class="arrow">→</span></div>
       </a>
-
-      <a class="perk" href="#buyer" onclick="document.getElementById('buyer').scrollIntoView({behavior:'smooth',block:'start'});return false;">
+      <a class="perk" href="#buyer">
         <div class="perk-head">
           <span class="perk-num">03</span>
           <span class="perk-name">商談・お取扱いのご相談</span>
         </div>
         <div class="perk-desc">バイヤー様専用のお問い合わせ窓口より、卸価格・MOQ・納期等を直接ご案内いたします。</div>
-        <div class="perk-cta">
-          <span>open for buyers</span>
-          <span class="arrow">→</span>
-        </div>
+        <div class="perk-cta"><span>open for buyers</span><span class="arrow">→</span></div>
       </a>
-
-      <a class="perk" href="#sample" onclick="document.getElementById('sample').scrollIntoView({behavior:'smooth',block:'start'});return false;">
+      <a class="perk" href="#sample">
         <div class="perk-head">
           <span class="perk-num">04</span>
           <span class="perk-name">追加サンプル ご請求</span>
         </div>
         <div class="perk-desc">本日お渡ししたサンプルに加えて、後日ご指定先へ追加サンプルをお届けいたします。</div>
-        <div class="perk-cta">
-          <span>request sample</span>
-          <span class="arrow">→</span>
-        </div>
+        <div class="perk-cta"><span>request sample</span><span class="arrow">→</span></div>
       </a>
     </div>
   </section>
 
-  <!-- ===== MEDIA & BUYER CONTACT ===== -->
+  <!-- PRESS -->
   <section class="simple-section" id="press">
     <div class="section-eyebrow">perk 02 ／ media</div>
-    <h2 class="section-title">プレス素材<br />ダウンロード</h2>
+    <h2 class="section-title">プレス素材<br>ダウンロード</h2>
     <div class="section-rule"></div>
-    <p class="section-body">
-      製品ビジュアル（高解像度）・ロゴデータ・ブランドファクトシート・代表プロフィールをまとめてお渡しいたします。<br />
-      下記までメディア名・お名前をお書き添えのうえご連絡ください。営業日2日以内にダウンロードURLをお送りいたします。
-    </p>
+    <div class="section-body">
+      <p>製品ビジュアル（高解像度）・ロゴデータ・ブランドファクトシート・代表プロフィールをまとめてお渡しいたします。下記までメディア名・お名前をお書き添えのうえご連絡ください。営業日2日以内にダウンロードURLをお送りいたします。</p>
+    </div>
     <div class="contact-grid">
       <div class="contact-card">
         <div class="role">press kit ／ media</div>
         <div class="h">メディア関係者さま窓口</div>
         <div class="d">取材依頼・素材請求は下記までお願いいたします。</div>
-        <a class="email" href="mailto:[email protected]?subject=%5BLA%20CARPE%20FES%202026%5D%E3%83%97%E3%83%AC%E3%82%B9%E7%B4%A0%E6%9D%90%E8%AB%8B%E6%B1%82&body=%E2%96%A0%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E3%81%94%E5%88%A9%E7%94%A8%E7%9B%AE%E7%9A%84%EF%BC%9A%0A">[email protected] →</a>
+        <a class="email" href="mailto:press@portebeauty.com?subject=%5BLA%20CARPE%20FES%202026%5D%E3%83%97%E3%83%AC%E3%82%B9%E7%B4%A0%E6%9D%90%E8%AB%8B%E6%B1%82&body=%E2%96%A0%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E3%81%94%E5%88%A9%E7%94%A8%E7%9B%AE%E7%9A%84%EF%BC%9A%0A">press@portebeauty.com →</a>
       </div>
     </div>
   </section>
 
+  <!-- BUYER -->
   <section class="simple-section" id="buyer">
     <div class="section-eyebrow">perk 03 ／ business</div>
-    <h2 class="section-title">商談・<br />お取扱いのご相談</h2>
+    <h2 class="section-title">商談・<br>お取扱いのご相談</h2>
     <div class="section-rule"></div>
-    <p class="section-body">
-      卸価格・最低発注ロット・納期・販促サポート等につきましては、ご商談にて個別にご案内させていただきます。<br />
-      下記までご連絡いただければ、担当より折り返しご案内いたします。
-    </p>
+    <div class="section-body">
+      <p>卸価格・最低発注ロット・納期・販促サポート等につきましては、ご商談にて個別にご案内させていただきます。下記までご連絡いただければ、担当より折り返しご案内いたします。</p>
+    </div>
     <div class="contact-grid">
       <div class="contact-card">
         <div class="role">wholesale ／ buyer</div>
         <div class="h">バイヤーさま窓口</div>
         <div class="d">取扱いのご検討・商談のご相談は下記までお問い合わせください。</div>
-        <a class="email" href="mailto:[email protected]?subject=%5BLA%20CARPE%20FES%202026%5D%E5%95%86%E8%AB%87%E3%83%BB%E3%81%8A%E5%8F%96%E6%89%B1%E3%81%84%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E5%BA%97%E8%88%97%E3%83%BB%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%EF%BC%9A%0A%E2%96%A0%E3%81%94%E8%B3%AA%E5%95%8F%E5%86%85%E5%AE%B9%EF%BC%9A%0A">[email protected] →</a>
+        <a class="email" href="mailto:wholesale@portebeauty.com?subject=%5BLA%20CARPE%20FES%202026%5D%E5%95%86%E8%AB%87%E3%83%BB%E3%81%8A%E5%8F%96%E6%89%B1%E3%81%84%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&body=%E2%96%A0%E8%B2%B4%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A%0A%E2%96%A0%E5%BA%97%E8%88%97%E3%83%BB%E3%83%81%E3%83%A3%E3%83%8D%E3%83%AB%EF%BC%9A%0A%E2%96%A0%E3%81%94%E8%B3%AA%E5%95%8F%E5%86%85%E5%AE%B9%EF%BC%9A%0A">wholesale@portebeauty.com →</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== SAMPLE REQUEST FORM ===== -->
+  <!-- SAMPLE FORM -->
   <section class="form-section" id="sample">
     <div class="section-eyebrow">perk 04 ／ sample</div>
-    <h2 class="section-title">追加サンプル<br />ご請求</h2>
+    <h2 class="section-title">追加サンプル<br>ご請求</h2>
     <div class="section-rule"></div>
-    <p class="section-body" style="margin-bottom:24px;">ご記入いただいた情報をもとに、後日ご指定先へサンプルをお届けいたします。</p>
-
     <div class="form-card">
-      <form id="sample-form" novalidate>
+      <p class="form-intro">ご記入いただいた情報をもとに、後日ご指定先へサンプルをお届けいたします。</p>
+      <form id="sampleForm" novalidate>
         <div class="field">
-          <div class="lbl">
-            <span class="ja">お名前</span>
-            <span class="req">必須</span>
-          </div>
-          <input type="text" name="name" required autocomplete="name" placeholder="山田 花子" />
+          <label class="lbl" for="f-name"><span>name</span><span class="ja">お名前</span><span class="req">必須</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
         </div>
-
         <div class="field">
-          <div class="lbl">
-            <span class="ja">メールアドレス</span>
-            <span class="req">必須</span>
-          </div>
-          <input type="email" name="email" required autocomplete="email" placeholder="[email protected]" />
+          <label class="lbl" for="f-email"><span>email</span><span class="ja">メールアドレス</span><span class="req">必須</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
         </div>
-
         <div class="field">
-          <div class="lbl">
-            <span class="ja">電話番号</span>
-          </div>
-          <input type="tel" name="tel" autocomplete="tel" placeholder="090-0000-0000" />
+          <label class="lbl" for="f-tel"><span>tel</span><span class="ja">電話番号</span></label>
+          <input id="f-tel" name="tel" type="tel" autocomplete="tel">
         </div>
-
         <div class="field">
-          <div class="lbl">
-            <span class="ja">郵便番号</span>
-            <span class="req">必須</span>
-          </div>
-          <input type="text" name="zip" required autocomplete="postal-code" placeholder="530-0001" />
+          <label class="lbl" for="f-zip"><span>postal</span><span class="ja">郵便番号</span><span class="req">必須</span></label>
+          <input id="f-zip" name="zip" type="text" inputmode="numeric" required autocomplete="postal-code" placeholder="530-0001">
         </div>
-
         <div class="field">
-          <div class="lbl">
-            <span class="ja">ご住所</span>
-            <span class="req">必須</span>
-          </div>
-          <input type="text" name="address" required autocomplete="street-address" placeholder="大阪市北区梅田1-11-4" />
+          <label class="lbl" for="f-addr"><span>address</span><span class="ja">ご住所</span><span class="req">必須</span></label>
+          <input id="f-addr" name="address" type="text" required autocomplete="street-address">
         </div>
-
         <div class="field">
-          <div class="lbl"><span class="ja">来場目的</span></div>
+          <span class="lbl"><span>purpose</span><span class="ja">来場目的</span></span>
           <div class="radio-row">
-            <label class="radio-chip"><input type="radio" name="role" value="general" />一般</label>
-            <label class="radio-chip"><input type="radio" name="role" value="press" />メディア</label>
-            <label class="radio-chip"><input type="radio" name="role" value="buyer" />バイヤー</label>
-            <label class="radio-chip"><input type="radio" name="role" value="other" />その他</label>
+            <label class="radio-chip"><input type="radio" name="purpose" value="一般" checked>一般</label>
+            <label class="radio-chip"><input type="radio" name="purpose" value="メディア">メディア</label>
+            <label class="radio-chip"><input type="radio" name="purpose" value="バイヤー">バイヤー</label>
+            <label class="radio-chip"><input type="radio" name="purpose" value="その他">その他</label>
           </div>
         </div>
-
         <div class="field">
-          <div class="lbl"><span class="ja">ひとこと（任意）</span></div>
-          <textarea name="message" placeholder="ご感想・ご質問などございましたら、お気軽にどうぞ。"></textarea>
+          <label class="lbl" for="f-msg"><span>message</span><span class="ja">ひとこと（任意）</span></label>
+          <textarea id="f-msg" name="message"></textarea>
+          <div class="helper">ご記入いただいた個人情報は、サンプル発送・商品案内および本イベントに関するご連絡のみに使用いたします。</div>
         </div>
-
-        <p style="font-size:11px;line-height:1.7;color:var(--ink-mute);margin:0 0 18px;">
-          ご記入いただいた個人情報は、サンプル発送・商品案内および本イベントに関するご連絡のみに使用いたします。
-        </p>
-
-        <button type="submit" class="btn-submit" id="submit-btn">サンプルを請求する →</button>
+        <button type="submit" class="btn-submit" id="submitBtn">サンプルを請求する →</button>
       </form>
-
-      <div class="form-success" id="form-success">
+      <div class="form-success" id="formSuccess">
         <div class="check">✓</div>
         <h3>ご請求ありがとうございます。</h3>
-        <p>5〜7営業日以内に、ご指定先へサンプルをお届けいたします。<br />ご記入いただいたメールアドレス宛に、ご請求内容の控えをお送りしました。</p>
+        <p>
+          5〜7営業日以内に、ご指定先へサンプルをお届けいたします。<br>
+          ご記入いただいたメールアドレス宛に、ご請求内容の控えをお送りしました。
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="foot">
-    <img src="assets/porte-logo.png" alt="porté" class="foot-logo" />
+    <img src="assets/porte-logo.png" alt="porté" class="foot-logo">
     <p>porté は、足し続けるのではなく整える、引き算で考えるスキンケアブランドです。</p>
-
     <dl class="foot-info">
-      <dt>Brand</dt>
-      <dd>porté（ポルテ）</dd>
-      <dt>Company</dt>
-      <dd>株式会社STARTKEY</dd>
-      <dt>Founded</dt>
-      <dd>2024年7月</dd>
-      <dt>Address</dt>
-      <dd>大阪市北区梅田1丁目11番4号<br />大阪駅前第4ビル 9階 923-1709号</dd>
-      <dt>Contact</dt>
-      <dd>[email protected]</dd>
+      <dt>Brand</dt><dd>porté（ポルテ）</dd>
+      <dt>Company</dt><dd>株式会社STARTKEY</dd>
+      <dt>Founded</dt><dd>2024年7月</dd>
+      <dt>Address</dt><dd>大阪市北区梅田1丁目11番4号<br>大阪駅前第4ビル 9階 923-1709号</dd>
+      <dt>Contact</dt><dd>info@portebeauty.com</dd>
     </dl>
-
     <div class="foot-links">
-      <a href="https://portebeauty.com/discount/PORTE15?redirect=%2Fproducts%2Fporte-serum-30ml-subscription" target="_blank" rel="noopener">official store</a>
-      <a href="https://www.instagram.com/porte_cosmetics/" target="_blank" rel="noopener">instagram</a>
-      <a href="https://startkey.co.jp" target="_blank" rel="noopener">startkey</a>
+      <a href="https://portebeauty.com/discount/PORTE15?redirect=%2Fproducts%2Fporte-serum-30ml-subscription">official store</a>
+      <a href="https://www.instagram.com/porte_cosmetics/">instagram</a>
+      <a href="https://startkey.co.jp">startkey</a>
     </div>
-
     <div class="foot-copy">© 2026 STARTKEY Co., Ltd.</div>
   </footer>
 
 </div>
 
-<div class="coupon-copy-toast" id="copy-toast">クーポンコードをコピーしました</div>
+<!-- Toast -->
+<div class="coupon-copy-toast" id="copyToast">クーポンコードをコピーしました</div>
 
 <script>
-// ===== ACCESS WINDOW (Option B) =====
-// Valid from 2026-05-22 00:00 JST to 2026-08-22 23:59 JST
-(function() {
-  const START = new Date('2026-05-22T00:00:00+09:00').getTime();
-  const END   = new Date('2026-08-22T23:59:59+09:00').getTime();
-  const now   = Date.now();
-  // Dev override: ?preview=1 disables gate for previewing
-  const preview = new URLSearchParams(location.search).get('preview') === '1';
-
-  if (!preview && (now < START || now > END)) {
-    const gate = document.getElementById('gate');
-    if (now < START) {
-      document.getElementById('gate-title').textContent = '公開までしばらくお待ちください。';
-      document.getElementById('gate-msg').innerHTML =
-        'porté Insider Pass は<br />2026.05.22 fri よりご利用いただけます。';
-    }
-    gate.classList.add('show');
-    document.body.style.overflow = 'hidden';
-    return;
+(function(){
+  // ===== Expired vs Active state =====
+  // Show "expired" screen only after 2026-08-23 00:00 JST.
+  // ?preview=expired forces the expired screen for QA.
+  // ?preview=1 (or no query) shows the active screen.
+  var params = new URLSearchParams(window.location.search);
+  var force = params.get('preview');
+  var END_DATE = new Date('2026-08-23T00:00:00+09:00'); // showing expired starts at this moment
+  var now = new Date();
+  var showExpired = (force === 'expired') || (force !== '1' && now >= END_DATE);
+  if (showExpired) {
+    document.getElementById('expiredScreen').classList.add('show');
+    document.getElementById('mainShell').style.display = 'none';
   }
-})();
 
-// Copy coupon code
-document.getElementById('copy-btn').addEventListener('click', async () => {
-  const code = document.getElementById('coupon-code').textContent.trim();
-  try {
-    await navigator.clipboard.writeText(code);
-  } catch(e) {
-    // Fallback
-    const ta = document.createElement('textarea');
-    ta.value = code;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
+  // ===== Coupon copy =====
+  var copyBtn = document.getElementById('copyCouponBtn');
+  var couponCode = document.getElementById('couponCode');
+  var toast = document.getElementById('copyToast');
+  var toastTimer = null;
+  if (copyBtn && couponCode && toast) {
+    copyBtn.addEventListener('click', function(){
+      var code = couponCode.textContent.trim();
+      var done = function(){
+        toast.classList.add('show');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(code).then(done).catch(function(){
+          fallbackCopy(code); done();
+        });
+      } else {
+        fallbackCopy(code); done();
+      }
+    });
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch(e){}
     document.body.removeChild(ta);
   }
-  const toast = document.getElementById('copy-toast');
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 2200);
-});
 
-// Radio chip behavior (visual)
-document.querySelectorAll('.radio-chip input').forEach(input => {
-  input.addEventListener('change', () => {
-    document.querySelectorAll('.radio-chip').forEach(chip => chip.classList.remove('active'));
-    input.closest('.radio-chip').classList.add('active');
+  // ===== Smooth scroll for anchor links =====
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior:'smooth', block:'start' });
+      }
+    });
   });
-});
 
-// Sample request form
-document.getElementById('sample-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  const form = e.target;
-  const btn = document.getElementById('submit-btn');
-  // simple required check
-  let ok = true;
-  form.querySelectorAll('[required]').forEach(input => {
-    if (!input.value.trim()) {
-      input.style.borderColor = '#C0392B';
-      ok = false;
-    } else {
-      input.style.borderColor = '';
-    }
-  });
-  if (!ok) {
-    btn.textContent = '入力内容をご確認ください';
-    setTimeout(() => { btn.textContent = 'サンプルを請求する →'; }, 1800);
-    return;
+  // ===== Sample form =====
+  var form = document.getElementById('sampleForm');
+  var success = document.getElementById('formSuccess');
+  var submitBtn = document.getElementById('submitBtn');
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      // simple required validation
+      var required = form.querySelectorAll('[required]');
+      var ok = true;
+      required.forEach(function(input){
+        if (!input.value.trim()) { ok = false; input.style.borderColor = '#C0392B'; }
+        else { input.style.borderColor = ''; }
+      });
+      var email = form.querySelector('#f-email');
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        ok = false; email.style.borderColor = '#C0392B';
+      }
+      if (!ok) { return; }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '送信中…';
+
+      var data = new FormData(form);
+      // ===== TODO: Replace this URL with your Formspree / Netlify / Google Apps Script endpoint =====
+      // If you previously had a working endpoint, paste it below:
+      var ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxxxx'
+
+      var showSuccess = function(){
+        form.style.display = 'none';
+        success.classList.add('show');
+        success.scrollIntoView({ behavior:'smooth', block:'start' });
+      };
+
+      if (ENDPOINT) {
+        fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: data
+        }).then(function(r){
+          if (r.ok) showSuccess();
+          else { submitBtn.disabled = false; submitBtn.textContent = 'サンプルを請求する →'; alert('送信に失敗しました。時間をおいて再度お試しください。'); }
+        }).catch(function(){
+          submitBtn.disabled = false; submitBtn.textContent = 'サンプルを請求する →';
+          alert('送信に失敗しました。時間をおいて再度お試しください。');
+        });
+      } else {
+        // No endpoint configured yet — show success and log payload to console
+        console.log('Sample request (no endpoint configured):', Object.fromEntries(data.entries()));
+        setTimeout(showSuccess, 400);
+      }
+    });
   }
-  btn.disabled = true;
-  btn.textContent = '送信中...';
-
-  // Send notification to info@startkey.co.jp via mailto (opens user's mail client)
-  // ※ 実運用時はサーバーサイドフォーム処理（FormSpree / Google Forms / 独自 API等）に差し替えてください
-  try {
-    const fd = new FormData(form);
-    const roleMap = { general: '一般', press: 'メディア', buyer: 'バイヤー', other: 'その他' };
-    const role = fd.get('role');
-    const lines = [
-      '■ お名前：' + (fd.get('name') || ''),
-      '■ メール：' + (fd.get('email') || ''),
-      '■ 電話：' + (fd.get('tel') || ''),
-      '■ 郵便番号：' + (fd.get('zip') || ''),
-      '■ ご住所：' + (fd.get('address') || ''),
-      '■ 来場目的：' + (roleMap[role] || ''),
-      '■ メッセージ：',
-      (fd.get('message') || ''),
-      '',
-      '———',
-      'porte Insider Pass ／ LA CARPE FES 2026'
-    ].join('\n');
-    const subject = '[LA CARPE FES 2026] 追加サンプルご請求';
-    const mailto = 'mailto:[email protected]?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines);
-    // Open mail client in background
-    setTimeout(() => { window.location.href = mailto; }, 600);
-  } catch(err) { console.warn(err); }
-
-  // Show success UI
-  setTimeout(() => {
-    form.style.display = 'none';
-    document.getElementById('form-success').classList.add('show');
-    document.getElementById('form-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 900);
-});
+})();
 </script>
-
 </body>
 </html>
